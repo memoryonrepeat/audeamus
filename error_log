@@ -1,0 +1,33 @@
+[22-Jun-2013 08:38:42] PHP Parse error:  syntax error, unexpected T_START_HEREDOC in /home1/nudituco/public_html/im2013/application/models/icreate_model.php on line 5
+[22-Jun-2013 08:38:47] PHP Parse error:  syntax error, unexpected T_START_HEREDOC in /home1/nudituco/public_html/im2013/application/models/icreate_model.php on line 5
+[22-Jun-2013 08:38:53] PHP Parse error:  syntax error, unexpected T_START_HEREDOC in /home1/nudituco/public_html/im2013/application/models/icreate_model.php on line 5
+[22-Jun-2013 08:49:28] PHP Parse error:  syntax error, unexpected T_START_HEREDOC in /home1/nudituco/public_html/im2013/application/models/icreate_model.php on line 5
+[22-Jun-2013 08:50:05] PHP Parse error:  syntax error, unexpected '.', expecting ',' or ';' in /home1/nudituco/public_html/im2013/application/models/icreate_model.php on line 3
+[22-Jun-2013 09:18:10] PHP Fatal error:  Call to undefined method DateTime::add() in /home1/nudituco/public_html/im2013/application/models/icreate_model.php on line 46
+[22-Jun-2013 09:18:22] PHP Fatal error:  Call to undefined method DateTime::add() in /home1/nudituco/public_html/im2013/application/models/icreate_model.php on line 46
+[22-Jun-2013 09:18:43] PHP Fatal error:  Call to undefined method DateTime::add() in /home1/nudituco/public_html/im2013/application/models/icreate_model.php on line 46
+[23-Jun-2013 00:57:10] PHP Fatal error:  Unsupported operand types in /home1/nudituco/public_html/im2013/application/controllers/icreate.php on line 57
+[23-Jun-2013 01:00:13] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home1/nudituco/public_html/im2013/application/controllers/icreate.php on line 57
+[23-Jun-2013 01:00:16] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home1/nudituco/public_html/im2013/application/controllers/icreate.php on line 57
+[23-Jun-2013 01:00:21] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home1/nudituco/public_html/im2013/application/controllers/icreate.php on line 57
+[23-Jun-2013 01:00:21] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home1/nudituco/public_html/im2013/application/controllers/icreate.php on line 57
+[23-Jun-2013 01:14:25] PHP Parse error:  syntax error, unexpected T_ECHO, expecting ',' or ';' in /home1/nudituco/public_html/im2013/application/controllers/icreate.php on line 65
+[23-Jun-2013 01:19:59] PHP Parse error:  syntax error, unexpected T_ECHO, expecting ',' or ';' in /home1/nudituco/public_html/im2013/application/controllers/icreate.php on line 65
+[23-Jun-2013 01:22:44] PHP Parse error:  syntax error, unexpected T_ECHO, expecting ',' or ';' in /home1/nudituco/public_html/im2013/application/controllers/icreate.php on line 65
+[25-Jun-2013 14:07:20] PHP Fatal error:  Call to undefined method CI_Session::destroy() in /home1/nudituco/public_html/im2013/application/controllers/auth.php on line 130
+[26-Jun-2013 03:16:07] CSRF state token does not match one provided.
+[29-Jun-2013 10:52:15] PHP Warning:  file_get_contents() [<a href='function.file-get-contents'>function.file-get-contents</a>]: SSL: connection timeout in /home1/nudituco/public_html/im2013/sender.php on line 41
+[29-Jun-2013 10:52:16] PHP Warning:  file_get_contents() [<a href='function.file-get-contents'>function.file-get-contents</a>]: Failed to enable crypto in /home1/nudituco/public_html/im2013/sender.php on line 41
+[29-Jun-2013 10:52:16] PHP Warning:  file_get_contents(https://sent.ly/command/sendsms?username=tienthanh8490%40gmail.com&amp;password=tienthinh&amp;text=messagesent&amp;to=%2B6582369884) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: operation failed in /home1/nudituco/public_html/im2013/sender.php on line 41
+[30-Jun-2013 00:56:02] PHP Fatal error:  Call to undefined function  getallheaders() in /home1/nudituco/public_html/im2013/application/controllers/icreate.php on line 105
+[30-Jun-2013 00:56:30] PHP Fatal error:  Call to undefined function  getallheaders() in /home1/nudituco/public_html/im2013/application/controllers/icreate.php on line 105
+[30-Jun-2013 00:57:39] PHP Fatal error:  Call to undefined function  getallheaders() in /home1/nudituco/public_html/im2013/application/controllers/icreate.php on line 105
+[30-Jun-2013 00:58:33] PHP Fatal error:  Call to undefined function  getallheaders() in /home1/nudituco/public_html/im2013/application/controllers/icreate.php on line 105
+[30-Jun-2013 00:59:09] PHP Fatal error:  Call to undefined function  getallheaders() in /home1/nudituco/public_html/im2013/application/controllers/icreate.php on line 105
+[30-Jun-2013 01:04:08] PHP Fatal error:  Call to undefined function  getallheaders() in /home1/nudituco/public_html/im2013/application/controllers/icreate.php on line 105
+[30-Jun-2013 01:04:52] PHP Fatal error:  Call to undefined function  getallheaders() in /home1/nudituco/public_html/im2013/application/controllers/icreate.php on line 113
+[30-Jun-2013 01:08:29] PHP Fatal error:  Call to undefined function  apache_request_headers() in /home1/nudituco/public_html/im2013/application/controllers/icreate.php on line 113
+[30-Jun-2013 10:28:47] PHP Fatal error:  Call to a member function set_newline() on a non-object in /home1/nudituco/public_html/im2013/application/controllers/welcome.php on line 20
+[30-Jun-2013 10:33:47] PHP Fatal error:  Call to a member function set_newline() on a non-object in /home1/nudituco/public_html/im2013/application/controllers/welcome.php on line 20
+[30-Jun-2013 10:53:08] PHP Fatal error:  Call to a member function set_newline() on a non-object in /home1/nudituco/public_html/im2013/application/controllers/welcome.php on line 20
+[30-Jun-2013 10:53:20] PHP Fatal error:  Call to a member function set_newline() on a non-object in /home1/nudituco/public_html/im2013/application/controllers/welcome.php on line 20

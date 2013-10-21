@@ -1,0 +1,49 @@
+CACHE MANIFEST
+# version1.0
+# 25.06.2013
+
+# Files to cache
+CACHE:
+index.html
+js/jquery-1.9.1.min.js
+js/snap.js
+js/jquery-ui.js
+js/jquery.mousewheel.min.js
+js/jQDateRangeSlider-withRuler-min.js
+js/jquery.smoothZoom.min.js
+js/cache.js
+js/icreate.js
+js/resources.js
+js/index.js
+css/iThing-min.css
+css/jquery-ui-1.8.10.custom.css
+css/snap.css
+css/flatddmenu.css
+css/index.css
+css/jqm-demos.css
+css/classic-min.css
+css/icons.png
+css/open.png
+css/preloader.gif
+images/curLoc.png
+images/Skydrive.png
+images/bookmarkIcon.png
+images/menu_icon.jpeg
+images/logo.jpg
+images/MoreInfo.png
+images/5LCircle4.png
+images/5LCircle3.png
+images/5LCircle2.png
+images/5LCircle.png
+images/mark.png
+images/pin.png
+path_menu/piemenu.css
+path_menu/jquery.menu.js
+path_menu/cross.svg
+70re.jpg
+# Display offline.html for all uncached pages
+FALLBACK:
+
+# Following resources require network connection.
+NETWORK:
+*

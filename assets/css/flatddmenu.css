@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+.dropdown a {
+  text-decoration: none;
+}
+.icon {
+	float: right;
+	margin-right: 20px;
+	font-size: 16px;
+	}
+/*
+ * Dropdown menu
+ */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  width: 220px;
+  float: right;
+}
+
+.dropdown-text::-moz-selection,
+.dropdown-toggle::-moz-selection { background: transparent; color: inherit; }
+.dropdown-text::selection,
+.dropdown-toggle::selection { background: transparent; color: inherit; }
+
+.dropdown-text {
+  cursor: pointer;
+  position: absolute;
+  text-indent: 10px;
+  line-height: 27px;
+  background-color: #68A1D6;
+  width: 100%;
+}
+
+.dropdown-text,
+.dropdown-content a {
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.dropdown-toggle {
+  font-size: 0;
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  text-indent: -10px;
+  height: 27px;
+  width: 100%;
+}
+
+.dropdown-toggle:focus {
+  outline: 0;
+}
+
+.dropdown-content {
+  -webkit-transition: .25s ease;
+  -moz-transition: .25s ease;
+  -ms-transition: .25s ease;
+  -o-transition: .25s ease;
+  transition: .25s ease;
+  list-style-type: none;
+  position: absolute;
+  top: 36px;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  visibility:hidden;
+  text-indent: 10px;
+  line-height: 38px;
+  background-color: #4F4F4B;
+  width: 220px;
+  z-index: 100;
+}
+
+.dropdown-content:after {
+	position: absolute;
+	right: 14px;
+	top: -9px;
+	content: '';
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 8px 9px 8px;
+	border-color: transparent transparent #4F4F4B transparent;
+}
+
+.dropdown-content li {
+	border-bottom:4px solid #68A1D6;
+	overflow:hidden;
+	}
+.dropdown-content li:last-child {
+		border-bottom:none;
+		}
+.dropdown-content a {
+  display: block;
+  -webkit-transition: .25s ease;
+  -moz-transition: .25s ease;
+  -ms-transition: .25s ease;
+  -o-transition: .25s ease;
+  transition: .25s ease;
+}
+
+.dropdown-content a:hover {
+  background: #68A1D6;
+  padding-left:5px;
+}

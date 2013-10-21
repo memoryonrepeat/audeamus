@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" manifest= "offline.manifest"> 
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="author" content="im.whatsword.com">
+	<meta name="keywords" content="nus events, Audeamus">
+	<meta  property="og:title" content="Audeamus - Find what happens around you" />
+	<meta property="og:description" content="Audeamus is an application that uses a new approach to draw attentions of NUS students to events happening around campus. By pinpointing on-campus events on the NUS Kent Ridge campus map, NUS fellows can easily navigate events and have an overview of all events around campus. " />
+	<meta property="og:image" content="images/logo.jpg"/>
+	<title>Audeamus</title>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	
+	<!-- Snapper -->
+	<link rel="stylesheet" type="text/css" href="css/snap.css" />
+	<script type="text/javascript" src="js/snap.js"></script>
+	
+	<!-- QDateRange -->
+	<link rel="stylesheet" id="themeCSS" href="css/iThing-min.css"> 
+	<link rel="stylesheet" href="css/jquery-ui-1.8.10.custom.css"> 
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script src="js/jQDateRangeSlider-withRuler-min.js"></script>
+	
+	<!-- Map-->
+	<script src="js/jquery.smoothZoom.min.js"></script>
+	
+	<!-- Flat dropdown -->
+	<link rel="stylesheet" type="text/css" href="css/flatddmenu.css" />
+	
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<script src="js/cache.js"></script>
+	<script src="js/icreate.js"></script>
+	<!--<script src="http://www.im2013.nuditu.com/index.php/icreate/static_resource"></script>-->
+	<script src="js/resources.js"></script>
+	
+	<!-- path menu -->
+	<link rel="stylesheet" type="text/css" href="path_menu/piemenu.css" />
+	<script src="path_menu/jquery.menu.js"></script>
+	
+	
+</head>
+<body>
+
+	<div class="snap-drawers">
+            <div class="snap-drawer snap-drawer-left" style="width:400px; " >
+				<div style="margin-top:10px">
+					<img src="images/curLoc.png" width="30px" height="30px" style="padding: 5px;" onClick="loadCurrentLocation()"/>
+					<img src="images/Skydrive.png" width="30px" height="30px" style="padding: 5px;" onClick="openSynTab()"/>
+					<img src="images/bookmarkIcon.png" width="30px" height="30px" style="padding: 5px;" onClick="openBookMarkList()"/>
+					<img src="images/MoreInfo.png" width="30px" height="30px" style="padding: 5px" onClick="openBugReport()"/>
+					<div style="float:right; font-style:italic; padding-right: 2px; padding-top: 10px;" id="welcome_us_info"></div>
+				</div>
+				<!-- Search -->
+				<div>
+					<form class="form-wrapper cf">
+						<input type="text" placeholder="Search here..." id="searchField" value="">
+						<button type="button" onClick="searchResult()">Search</button>
+					</form>
+				</div>
+			
+				<div style="min-height:500px;">
+					<div id="leftMenuMainArea">
+						<div class="myblockHeader" id="leftMenuHeader">Welcome to Audeamus</div>
+						<div id="lmCurrentLocation" style="display:none; background-color: white; border: 1px solid #EEEEEE; padding:5px">
+							<p id="lmclstatus"></p>
+							<p><b>NUS Internal Shuttle Bus Services</b></p>
+							<p>BUS A1:
+							<ul>
+								<li>Prince George's Park terminal</li>
+								<li>After Science Park Drive</li>
+								<li>Kent Ridge MRT Station - NUH</li>
+								<li>LT 29</li>
+								<li>University Hall</li>
+								<li>Opp. Staff Club</li>
+								<li>Yusof Ishak House</li>
+								<li>Central Library</li>
+								<li>LT 13</li>
+								<li>AS 7</li>
+								<li>Com 2 </li>
+								<li>BIZ 2</li>
+								<li>Opp. House 12</li>
+								<li>House 7</li>
+								<li>Prince George's Park terminal</li>
+							</ul>
+							<p>BUS A2:
+							<ul>
+								<li>Prince George's Park terminal</li>
+								<li>Between House 14 and 15</li>
+								<li>House 12</li>
+								<li>Opp Hon Sui Sen Library</li>
+								<li>Com 2</li>
+								<li>Temasek Hall </li>
+								<li>Eusoff Hall</li>
+								<li>Opp. LT 13 </li>
+								<li>Computer Centre</li>
+								<li>Opp. Yusof Ishak House</li>
+								<li>Office of Estate and Development </li>
+								<li>Staff Club</li>
+								<li>Opp. University Hall</li>
+								<li>S 17</li>
+								<li>Opp. NUH - Kent Ridge MRT Station </li>
+								<li>Prince George's Park terminal</li>
+							</ul>
+							</p>
+							<p>BUS B:
+							<ul>
+								<li>E3A</li>
+								<li>Office of Estate and Development</li>
+								<li>Yusof Ishak House</li>
+								<li>Central Library</li>
+								<li>LT13</li>
+								<li>AS7</li>
+								<li>Com 2</li>
+								<li>Temasek Hall</li>
+								<li>Eusoff Hall</li>
+								<li>Opp. LT13</li>
+								<li>Computer Centre</li>
+								<li>Opp. Yusof Ishak House</li>
+								<li>Raffles Hall</li>
+								<li>E3A</li>
+							</ul>
+							</p>
+							<p>BUS C:
+							<ul>
+								<li>E3A</li>
+								<li>Office of Estate and Development</li>
+								<li>Staff Club</li>
+								<li>Opp. University Hall</li>
+								<li>S17</li>
+								<li>LT 29</li>
+								<li>University Hall</li>
+								<li>Opp. Staff Club</li>
+								<li>Raffles Hall</li>
+								<li>E3A</li>
+							</ul>
+							</p>
+							<p>BUS D1:
+							<ul>
+								<li>Opp Hon Sui Sen Library</li>
+								<li>COM2</li>
+								<li>Opp LT 13</li>
+								<li>Computer Centre</li>
+								<li>Opp Yusof Ishak House</li>
+								<li>Office of Estate & Development</li>
+								<li>UTown</li>
+								<li>Staff Club</li> 
+								<li>Opp University Hall</li>
+								<li>S17</li>
+							</ul>
+							</p>BUS D2:
+							<p>
+								<ul>
+									<li>LT29</li>
+									<li>University Hall</li>
+									<li>Opp. Staff Club</li>
+									<li>Office of Estate & Development</li>
+									<li>UTown</li>
+									<li>Yusof Ishak House</li>
+									<li>Central Library</li>
+									<li>LT 13</li>
+									<li>AS7</li>
+									<li>COM2</li>
+									<li>BIZ 2</li>
+								</ul>
+							</p>
+						</div>
+						<div id="lmSearch" style="display:none">
+						</div>
+						<div id="lmSyn" style="display:none">
+							<div id="lmSynNotLogged" style="display:none">
+								<ul class="left_ul">
+									<li class="leftm_li"><div class="left_div_child"><a href="http://imbn.whatsword.com/index.php/auth/login/fb">Using Facebook Account</a></div></li>
+									<li class="leftm_li"><div class="left_div_child"><a href="http://imbn.whatsword.com/index.php/auth/login/gmail">Using Gmail Account</a></div></li>
+									<li class="leftm_li"><div class="left_div_child"><a href="http://imbn.whatsword.com/index.php/auth/login/yahoo">Using Yahoo Account</a></div></li>
+								</ul>
+							</div>
+							<div id="lmSynLogged" style="display:none; background-color: white; border: 1px solid #EEEEEE; padding:5px">You have already logged in, your data is synced automatically. You can log out at <a href='javascript:logout()'>here</a><br><br>Please indicate the keyword for events you are interested in, we will send you the newsletter everyweek. Leave it blank if you don't want to receive the newsletter.<br>
+							<input type="text" id="userPreferTag" style="width:300px" placeholder="tag1, tag2"/>
+							<button class="mybutton" style="font:bold 13px/24px 'lucida sans','trebuchet MS','Tahoma'; padding-left:10px; padding-right:10px;" type="button" onClick="updatePrefer()">Save</button>
+							</div>
+						</div>
+						<div id="lmBookMark" style="display:none">
+							<ul class="left_ul" id="bookmarkul">
+							</ul>
+						</div>
+						<div id="lmBugReport" style="background-color: white; border: 1px solid #EEEEEE; padding:5px">
+							<p><center><img src="images/logo.jpg"></center></p>
+							<p>
+							Audeamus is an application that uses a new approach to draw attentions of NUS students to events happening around campus. By pinpointing on-campus events on the NUS Kent Ridge campus map, NUS fellows can easily navigate events and have an overview of all events around campus. Students can choose to find events happening in a certain period of time, as well as filter events by category. They can also see event description in detail, and bookmark events that they are interested in. Audeamus also supports the functionality of sharing events on popular social network platforms. </p>
+							<p>If you have any questions, feel free to contact us at contact@im.whatsword.com.</p>
+							
+						</div>
+						<div id="lmEventDetails" style="display:none">
+							<div id="lmEventDetailsContent"></div>
+							<div id="lmEventDetailsButton" style="display:none">
+							<button class="mybutton" style="width:125px; float: right; margin-left: 10px;" id="bookmarkEventButton" onClick="bookmark($(this))" event_id="">BookMark</button>
+							<button class="mybutton" style="width:125px; float: right; margin-left: 10px;" id="reminderButton" onClick="openRemiderDialog($(this))" event_id="">Reminder</button>
+	<div style=" position:absolute; margin-top: 35px;">
+		<div id="event_social_share" class="evnSocialPath">
+			<a class="menu_button" title="Toggle" href="#" event_id=""><span>Share Menu</span></a>
+			<ul class="menu_option">
+				<li><a onClick="share_action($(this))" event_id="" type="fb"><span>FB</span></a></li>
+				<li><a onClick="share_action($(this))" event_id="" type="google"><span>G+</span></a></li>
+				<li><a onClick="share_action($(this))" event_id="" type="twitter"><span>Twitter</span></a></li>
+				<li><a onClick="share_action($(this))" event_id="" type="email"><span>Email</span></a></li>
+			</ul>
+		</div>
+	</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+		    </div>
+	    <div class="snap-drawer snap-drawer-right"></div>
+        </div>
+		
+	<div id="mainArea"  class="snap-content">
+		<div style="margin-top:15px; text-align:center" id="do-drag">
+			<b>Audeamus</b><em> - Find what happens around you --></em>
+		</div>
+		<div style="width:1000px; margin: 10px auto 0;" data-snap-ignore="true">
+			<div style="width:100%; text-align:right; font-style:italic;" id="envCountLabel"></div>
+			<div id="dateSelector" style="width:750px; margin-left:30px"></div>
+			<div class="dropdown" style="position: relative; z-index:100"> 
+				<div class="dropdown-text" onClick="openCatDropDown()" id="catTitle">All Categories<i class="icon-user icon"></i></div>
+				<ul class="dropdown-content" id="catDropDownList">
+					<li><a href="javascript:changeCategory(0)">All Categories</a></li>
+				</ul>
+			</div>
+			<img src="images/menu_icon.jpeg" width="25px" style="padding-top:1px;" onClick="snapper_.open('left');"/>
+		</div>
+	
+		<div id="zoom_container" style="height: 550px;width: 1000px; margin: 20px auto 0; margin-top:2px; border: 1px solid #EEEEEE;" data-snap-ignore="true">
+			<img id="nusmap" src="70re.jpg" width="3699px" height="3940px" style="opacity:0.4"/>
+			<div class="landmarks" data-show-at-zoom="27" data-allow-drag="false" data-allow-scale="false">																
+			</div>
+		</div>
+	</div>
+	
+	<div id="reminder-form" title="Remind me!">
+		<p>
+			Remind 
+			<select id="remindBeforeHour">
+				<option selected="selected" value="1">1 hour</option>
+				<option value="2">2 hours</option>
+				<option value="3">3 hours</option>
+				<option value="24">1 day</option> 
+			</select> before this event.
+		</p>
+		<p>
+			<label for="name">Email to</label><br>
+			<input type="text" class="myinput" id="reminderEmail" value="">
+		</p>
+		<p>
+			<label for="name">SMS to</label><br>
+			<input type="text" class="myinput" id="remiderPhone" value="">
+		</p>
+		<p align="right"><button class="mybutton" id="reminderSubmitButton" style="width:105px" onClick="remindme($(this))" event_id="">Submit</button></p>
+	</div>
+<script language="javascript">
+function convertLanLongToMapPos(latitude, longitude) {
+	//var returnObj = {"x":2130, "y":3020};
+	/*
+	max_x = 3699; //Max x coordinate on the map
+	max_y = 2940; //Max y coordinate on the map
+
+	latitude_root = 1.310359; //Latitude of the point at the top left corner
+	longitude_root = 103.771909; //Longitude of the point at the top left corner
+		
+	latitude_end = 1.2555; //Latitude of the point at the bottom right corner
+	longitude_end = 103.77264; //Longitude of the point at the bottom right corner
+		
+	latitude_length = latitude_root - latitude_end; 
+	longitude_length = longitude_end - longitude_root;
+
+	scaled_x= (latitude_root - latitude)*max_x/latitude_length;
+	scaled_y= (longitude - longitude_root)*max_y/longitude_length;
+
+	var returnObj = {"x":scaled_x, "y":scaled_y};
+	*/
+	var returnObj = {"x":460, "y":1000};
+
+	return  returnObj;
+}
+</script>
+<script src="js/index.js"></script>
+</body>
+</html>
